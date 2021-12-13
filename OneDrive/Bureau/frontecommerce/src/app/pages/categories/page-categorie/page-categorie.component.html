@@ -1,0 +1,80 @@
+<div class="col">
+  <div class="row m-3">
+    <div class="table-title">
+      <div class="row">
+        <div class="col-sm-6">
+          <h2>Gestion de <b>Catégorie</b></h2>
+        </div>
+        <div class="col-sm-6">
+            <div class="d-flex">
+              <div class="p-2 flex-fill">
+                <button type="button" class="btn btn-success">
+                  <i class="fas fa-download"></i>&nbsp;Exporter
+                </button>
+              </div>
+              <div class="p-2 flex-fill">
+                <app-nouvel-categorie></app-nouvel-categorie>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col m-0">
+    <div class="row col-md-12 custom-border mb-3 p-3 m-0 " *ngFor= "let category of categories">
+      <div class="col-md-3 custom-border-right ">
+        {{category.id}}
+      </div>
+      <div class="col-md-3 custom-border-right">
+        {{category.name}}
+      </div>
+      <div class="col-md-3 custom-border-right">
+        liste de sous categorie
+      </div>
+      <div class="col-md-3 ">
+        <div class="row ml-3">
+          <div class="col-md-6">
+            <app-update-one-categorie></app-update-one-categorie>
+          </div>
+          <div class="col-md-6">
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalDeleteCat" (click)="selectCatPourSupprimer(category.id)" >
+              <i class="fas fa-trash-alt" ></i>&nbsp;supprimer
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class=" col-md-12 text-center">
+      <app-pagination></app-pagination>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="modalDeleteCat" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+     aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Confirmation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Etes vous-sur de vouloir supprimer cette categorie?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="annulerSuppressionCat()" >
+          <i class="fas fa-ban"></i>&nbsp;Annuler</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="confirmerEtSupprimerCat()">
+          <i class="fas fa-trash-alt"></i>&nbsp;Supprimer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+

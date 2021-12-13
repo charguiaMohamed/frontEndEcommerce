@@ -1,0 +1,27 @@
+.table-title {
+  padding-bottom: 15px;
+  background: #acbad4;
+  color: #fff;
+  padding: 16px 30px;
+  min-width: 100%;
+  /*margin: -20px -25px 10px;*/
+  /*border-radius: 3px 3px 0 0;*/
+}
+.table-title h2 {
+  margin: 5px 0 0;
+  font-size: 24px;
+}
+.table-title .btn-group {
+  float: right;
+}
+.table-title .btn {
+  color: #fff;
+  float: right;
+  font-size: 13px;
+  border: none;
+  min-width: 50px;
+  border-radius: 2px;
+  border: none;
+  outline: none !important;
+  margin-left: 350px;
+}

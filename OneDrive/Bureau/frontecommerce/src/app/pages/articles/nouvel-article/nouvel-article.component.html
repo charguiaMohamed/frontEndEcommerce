@@ -1,0 +1,83 @@
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Article Information</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form >
+      <div class="form-group">
+        <label>code article</label>
+        <input type="text" formControlName="code article" class="form-control"/>
+      </div>
+
+      <div class="form-group">
+        <label>libelle</label>
+        <input type="text" formControlName="libelle" class="form-control"/>
+      </div>
+
+      <div class="form-group">
+        <label>libelle</label>
+        <input type="text" formControlName="libelle" class="form-control"/>
+      </div>
+
+      <div class="form-group">
+        <label>Description</label>
+        <input type="text" formControlName="Description" class="form-control"/>
+      </div>
+
+      <div class="form-group">
+        <label>TVA</label>
+        <input type="text" formControlName="TVA" class="form-control"/>
+      </div>
+
+      <div class="form-group">
+        <label>Prix unitaire HT</label>
+        <input type="text" formControlName="Prix unitaire HT" class="form-control"/>
+      </div>
+
+      <div class="form-group">
+        <label>Prix unitaire TTC</label>
+        <input type="text" formControlName="Prix unitaire TTC" class="form-control"/>
+      </div>
+
+      <div class="form-group">
+        <label>catégorie </label>
+        <select class="form-select">
+        <option selected>choisir la catégorie</option>
+        <option value="1">cat One</option>
+        <option value="2"> cat Two</option>
+        <option value="3"> cat Three</option>
+      </select>
+      </div>
+
+      <div class="form-group">
+        <label> sous catégorie</label>
+        <select class="form-select">
+          <option selected>choisir la sous-catégorie</option>
+          <option value="1"> souscat One</option>
+          <option value="2"> souscat Two</option>
+          <option value="3"> souscat Three</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Brind </label>
+        <select class="form-select">
+          <option selected>choisir la brind</option>
+          <option value="1">brind One</option>
+          <option value="2"> brind Two</option>
+          <option value="3"> brind Three</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Register</button>
+      </div>
+    </form>
+  </div>
+</ng-template>
+
+<button class="btn btn-primary" (click)="open(content)"><i class="fas fa-plus"></i>&nbsp;Nouveau</button>
+

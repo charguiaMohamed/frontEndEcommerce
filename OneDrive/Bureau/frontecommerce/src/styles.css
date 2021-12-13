@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+body {
+  background-color: #eff2f5 !important;
+}
+.backgroung-grey {
+  background-color: #eff2f5 !important;
+}
+.border-none {
+  border: none !important;
+}
+.border-right{
+  border-right: solid #eff2f5 ;
+}
+.custom-border{
+  border: solid #9c9fa6;
+  border-radius: 5px;
+}
+.custom-border-right {
+  border-right: 2px solid #9ca1a6 !important; ;
+}
+.blue-color {
+  color: #037bfe;
+}
+.center {
+  width: 600px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

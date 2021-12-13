@@ -1,0 +1,59 @@
+<ng-template #updateArticle>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">modifier Article</h4>
+    <button type="button" class="close" aria-label="Close" (click)="dismiss()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form  [formGroup]="validationForm">
+      <div class="form-group">
+        <label>code article</label>
+        <input type="text" formControlName="code" class="form-control"/>
+      </div>
+
+      <div class="form-group">
+        <label>libelle</label>
+        <input type="text" formControlName="libelle" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <label>Description</label>
+        <input type="text" formControlName="Description" class="form-control"/>
+      </div>
+
+      <div class="form-group">
+        <label>TVA</label>
+        <input type="text" formControlName="TVA" class="form-control"/>
+      </div>
+
+      <div class="form-group">
+        <label>Prix unitaire HT</label>
+        <input type="text" formControlName="HT" class="form-control"/>
+      </div>
+
+      <div class="form-group">
+        <label>Prix unitaire TTC</label>
+        <input type="text" formControlName="TTC" class="form-control"/>
+      </div>
+
+      <div class="form-group">
+        <label>catégorie </label>
+        <input type="text" formControlName="catégorie" class="form-control"/>
+      </div>
+
+      <div class="form-group">
+        <label> sous-catégorie</label>
+        <input type="text" formControlName="sous-catégorie" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Register</button>
+      </div>
+    </form>
+  </div>
+</ng-template>
+
+
+<button type="button" class="btn btn-primary" (click)="open(updateArticle)">
+  <i class="fas fa-pencil-alt"></i>&nbsp;Modifier
+</button>
+
